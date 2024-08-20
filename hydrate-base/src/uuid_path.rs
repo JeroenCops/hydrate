@@ -11,7 +11,7 @@ pub fn uuid_to_path(
     // Convert UUID to a 32-character hex string (no hyphens)
     // example: 8cf25195abd839981ea3c93c8fd2843f
     let mut buffer = [0; 32];
-    let encoded = uuid.to_simple().encode_lower(&mut buffer).to_string();
+    let encoded = uuid.simple().encode_lower(&mut buffer).to_string();
     // Produce path like [root]/8/c/8cf25195abd839981ea3c93c8fd2843f
     root.join(&encoded[0..1]).join(&encoded[1..2]).join(format!(
         "{}.{}",
@@ -32,7 +32,7 @@ pub fn uuid_and_hash_to_path(
     // Convert UUID to a 32-character hex string (no hyphens)
     // example: 8cf25195abd839981ea3c93c8fd2843f
     let mut buffer = [0; 32];
-    let uuid_encoded = uuid.to_simple().encode_lower(&mut buffer).to_string();
+    let uuid_encoded = uuid.simple().encode_lower(&mut buffer).to_string();
 
     // Produce path like [root]/8/c/8cf25195abd839981ea3c93c8fd2843f
     root.join(&uuid_encoded[0..1])

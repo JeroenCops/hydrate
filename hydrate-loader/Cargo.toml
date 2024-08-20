@@ -23,7 +23,7 @@ log = "0.4.14"
 crossbeam-channel = "0.5"
 serde = { version = "1", features = ["derive"] }
 serde_json = { default-features = false, version = "1.0.85", features = ["std"] }
-uuid = { version = "0.8.2", features = ["v4", "serde"] }
+uuid = { version = "1.4", features = ["v4", "serde"] }
 profiling = "1.0"
 type-uuid = "0.1.2"
 downcast-rs = "1.2.0"
